@@ -28,3 +28,60 @@
 </body>
 
 </html>
+
+<!--
+Common DOM Properties and Methods for Revision:
+
+Element Selection:
+  - document.getElementById(id): Selects element by its id (returns single element)
+  - document.getElementsByClassName(className): All elements with the given class (HTMLCollection)
+  - document.getElementsByTagName(tagName): All elements with the given tag (HTMLCollection)
+  - document.querySelector(selector): First element matching the CSS selector
+  - document.querySelectorAll(selector): All elements matching the CSS selector (NodeList)
+
+Element Properties:
+  - element.innerHTML: Gets/sets HTML content
+  - element.innerText: Gets/sets visible text
+  - element.textContent: Gets/sets all text (including hidden)
+  - element.className: Class attribute as a string
+  - element.classList: Methods to add/remove/toggle classes
+  - element.id: Gets/sets the id attribute
+  - element.style: Inline styles (e.g., element.style.color)
+  - element.value: Value for input, textarea, select
+  - element.dataset: data-* attributes as a DOMStringMap
+
+Element Methods:
+  - element.setAttribute(name, value): Set an attribute
+  - element.getAttribute(name): Get an attribute
+  - element.removeAttribute(name): Remove an attribute
+  - element.appendChild(node): Add node as last child
+  - element.removeChild(node): Remove a child node
+  - element.insertAdjacentHTML(position, text): Insert HTML at a position
+  - element.insertBefore(newNode, referenceNode): Insert before referenceNode
+  - element.cloneNode(deep): Clone the element (deep clones children)
+  - element.replaceWith(node): Replace with another node
+  - element.before(node): Insert before the element
+  - element.after(node): Insert after the element
+  - element.remove(): Remove the element from the DOM
+
+Event Handling:
+  - element.addEventListener(event, handler): Attach event handler
+  - element.removeEventListener(event, handler): Remove event handler
+
+Other Useful:
+  - window.getComputedStyle(element): Get computed CSS styles
+  - document.createElement(tagName): Create a new element
+  - document.createTextNode(text): Create a new text node
+  - document.body, document.head: Access <body> and <head>
+  - parentNode: The parent element node
+  - childNodes: All child nodes (including text/comments)
+  - children: Only child element nodes
+  - firstChild: The first child node (could be text/comment/element)
+  - lastChild: The last child node
+  - firstElementChild: The first child that is an element
+  - lastElementChild: The last child that is an element
+  - nextSibling: The next sibling node (could be text/comment/element)
+  - previousSibling: The previous sibling node
+  - nextElementSibling: The next sibling that is an element
+  - previousElementSibling: The previous sibling that is an element
+-->

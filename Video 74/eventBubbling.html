@@ -38,15 +38,16 @@
     </div>
     <script>
         document.querySelector(".child").addEventListener("click", (e) => {
-            e.stopPropagation()
+            e.stopPropagation() // Prevents event from bubbling up
             alert("Child Was clicked")
         })
 
         document.querySelector(".childContainer").addEventListener("click", (e) => {
-            e.stopPropagation()
+            e.stopPropagation() // Prevents event from bubbling up
             alert("childContainer Was clicked")
         })
 
+        // Container click: shows alert (bubbling reaches here if not stopped)
         document.querySelector(".container").addEventListener("click", (e) => {
             alert("container Was clicked")
         })
@@ -57,19 +58,17 @@
             let val3 = Math.ceil(0 + Math.random() * 255);
             return `rgb(${val1}, ${val2}, ${val3})`
         }
+        // setInterval example (commented): changes color every second
         // let a = setInterval(() => {
         //     document.querySelector(".childContainer").style.background = getRandomColor();
         // }, 1000);
 
-        // console.log(a)
-
+        // setTimeout: changes color after 5 seconds
         let a = setTimeout(() => {
             document.querySelector(".childContainer").style.background = getRandomColor();
         }, 5000);
 
-        console.log(a)
-
-
+        console.log(a) // Log timeout id
     </script>
 </body>
 
