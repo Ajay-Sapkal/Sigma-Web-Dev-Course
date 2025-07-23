@@ -8,19 +8,27 @@
 </head>
 
 <body>
+    <!-- Button to add a new note -->
     <button>Add Note</button>
+    <!-- Div to display the saved note -->
     <div class="note"></div>
     <script>
 
+
+        // Function to save the note to localStorage
         function saveNoteToLocalStorage(note) {
             localStorage.setItem("note", note);
         }
 
+
+        // Retrieve the note from localStorage (if any) and display it
         let note = localStorage.getItem("note")
         if(note){
             document.querySelector(".note").innerHTML = note
         }
         
+
+        // When the button is clicked, prompt the user for a note, save it, and display it
         document.querySelector("button").addEventListener("click", () => {
             let note = prompt("Enter your note")
             saveNoteToLocalStorage(note)

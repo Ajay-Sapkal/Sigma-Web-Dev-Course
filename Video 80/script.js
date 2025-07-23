@@ -1,4 +1,5 @@
 // Example of prototypal inheritance 
+// Prototypal inheritance allows objects to share behavior and properties by linking to other objects as prototypes.
 // let animal = {
 //     eats: true;
 // }

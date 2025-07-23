@@ -25,5 +25,8 @@ class User {
   let user = new User("John"); // Creates user, sets name via setter
   console.log(user.name); // John (getter is called)
   
-    user.name = "Harry" // Name is too short. (setter validation fails)
-  console.log(user.name) // Still John, as name was not updated
+  user.name = "Harry"; // Should pass validation (5 chars >= 4)
+  console.log(user.name); // Harry (name was updated successfully)
+  
+  user.name = "Jo"; // Name is too short (2 chars < 4)
+  console.log(user.name); // Still Harry, as validation failed
